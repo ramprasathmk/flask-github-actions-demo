@@ -21,7 +21,7 @@ def return_hello_with_name(name: str = "Ramprasath M K"):
     return f"""
     <center><h1> Welcome </h1></center>
     <br/>
-    <h3>Hi, {name}</h3>
+    <h3>Hi, {name.capitalize()}</h3>
     """
 
 
