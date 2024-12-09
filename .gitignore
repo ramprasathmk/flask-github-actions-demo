@@ -1,0 +1,18 @@
+# Ignore specific files
+.env
+
+# Ignore IDE files and folders
+.idea
+.vscode
+
+# Ignore python dependencies and out dir's
+__pycache__
+__pycache__/*
+.venv
+.venv/*
+.conda
+.conda/*
+
+# Ignore py out files
+*.pyo
+*.pyd
