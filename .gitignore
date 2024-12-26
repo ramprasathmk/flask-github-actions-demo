@@ -1,18 +1,25 @@
 # Ignore specific files
 .env
 
+# Ignore workspace files and folders
+.git
+
 # Ignore IDE files and folders
 .idea
 .vscode
 
-# Ignore python dependencies and out dir's
+# Ignore python caches
 __pycache__
 __pycache__/*
+.pytest_cache
+.pytest_cache/*
+
+# Ignore python environments
 .venv
 .venv/*
 .conda
 .conda/*
 
-# Ignore py out files
+# Ignore python sensitive files
 *.pyo
 *.pyd
