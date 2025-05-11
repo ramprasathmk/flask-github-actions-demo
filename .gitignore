@@ -17,8 +17,10 @@ __pycache__/*
 # Ignore python environments
 .venv
 .venv/*
-.conda
-.conda/*
+
+# Ignore mypy caches
+.mypy_cache
+.mypy_cache/*
 
 # Ignore python sensitive files
 *.pyo
