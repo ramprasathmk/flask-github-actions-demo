@@ -1,31 +1,31 @@
-from flask import Flask
+from flask import Flask, render_template
 from dotenv import load_dotenv
 import os
 
 load_dotenv()
 
-app = Flask(__name__)
+app:Flask = Flask(__name__, template_folder="./templates")
+PORT:str = os.getenv("PORT")
 
 
 @app.route('/')
+@app.route('/home')
+def return_home():
+    return render_template('index.html')
+
+
+@app.route('/hello')
 def return_hello():
-    return f"""
-    <center><h1> Welcome </h1></center>
-    <br/>
-    <h3>Greetings</h3>
-    """
+    return render_template('hello.html')
 
 
-@app.route('/<name>')
-def return_hello_with_name(name: str = "Ramprasath M K"):
-    return f"""
-    <center><h1> Welcome </h1></center>
-    <br/>
-    <h3>Hi, {name.capitalize()}</h3>
-    """
+@app.route('/hello/<name>')
+def return_hello_with_name(name: str):
+    return render_template('hello.html', name=name
+                           )
 
 
-@app.route('/<random_string>')
+@app.route('/random_string:<random_string>')
 def return_backwards_string(random_string):
     return "".join(reversed(random_string))
 
@@ -36,4 +36,4 @@ def get_mode():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8080)
+    app.run(debug=True, host='0.0.0.0', port=PORT)
