@@ -26,6 +26,9 @@ __pycache__/*
 build/
 dist/
 
+# Ignore other directories
+*.egg-info/
+
 # Ignore python sensitive files
 *.pyo
 *.pyd
