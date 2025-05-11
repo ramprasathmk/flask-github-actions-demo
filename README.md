@@ -19,17 +19,32 @@
 ## Commands Used for the 
 
 - The installation of **uv** package:
-  - ```python -m pip install uv```
-  - ```uv --version```
+  - ```bash
+    python -m pip install uv
+    ```
+  - ```bash
+    uv --version
+    ```
 
 - The project creation:
-  - Select any workspace to create the sample project
+  - Select any workspace to create the sample flask project
   - Go to the workspace and then 
-    - ```uv init webapp```
+    - ```bash 
+      uv init webapp
+      ```
   - Create the Python Virtual Environment 
-    - ```uv venv .venv```
+    - ```bash 
+      uv venv .venv
+      ```
   - Install the necessary packages for your project
-    - ```uv add <package1> <package2> ...``` or
-    - ```uv pip install <package_name>```
+    - ```bash 
+      uv add <package1> <package2> ...
+      ``` 
+      or
+    - ```bash 
+      uv pip install <package_name>
+      ```
   - Run the webapp
-    - ```uv run main.py```
+    - ```bash 
+      uv run app/main.py
+      ```
