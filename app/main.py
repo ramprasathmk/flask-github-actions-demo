@@ -21,8 +21,7 @@ def return_hello():
 
 @app.route('/hello/<name>', methods=['GET'])
 def return_hello_with_name(name: str):
-    return render_template('hello.html', name=name
-                           )
+    return render_template('hello.html', name=name)
 
 
 @app.route('/random_string:<random_string>', methods=['GET', 'POST'])
