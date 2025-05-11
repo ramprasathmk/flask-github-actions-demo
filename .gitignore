@@ -22,6 +22,10 @@ __pycache__/*
 .mypy_cache
 .mypy_cache/*
 
+# Ignore builds
+build/
+dist/
+
 # Ignore python sensitive files
 *.pyo
 *.pyd
