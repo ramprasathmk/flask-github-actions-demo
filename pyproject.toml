@@ -7,5 +7,6 @@ requires-python = ">=3.11"
 dependencies = [
     "black>=25.1.0",
     "mypy>=1.15.0",
+    "pip>=25.1.1",
     "sqlalchemy",
 ]
